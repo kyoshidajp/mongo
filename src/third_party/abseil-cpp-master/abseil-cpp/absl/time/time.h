@@ -834,12 +834,15 @@ std::string UnparseFlag(Time t);
 //
 // The `absl::TimeZone` is an opaque, small, value-type class representing a
 // geo-political region within which particular rules are used for converting
-// between absolute and civil times (see https://git.io/v59Ly). `absl::TimeZone`
-// values are named using the TZ identifiers from the IANA Time Zone Database,
-// such as "America/Los_Angeles" or "Australia/Sydney". `absl::TimeZone` values
-// are created from factory functions such as `absl::LoadTimeZone()`. Note:
-// strings like "PST" and "EDT" are not valid TZ identifiers. Prefer to pass by
-// value rather than const reference.
+// between absolute and civil times.
+// (see https://github.com/google/cctz#fundamental-concepts)
+//
+// `absl::TimeZone`values are named using the TZ identifiers from
+// the IANA Time Zone Database, such as "America/Los_Angeles"
+// or "Australia/Sydney". `absl::TimeZone` values are created from factory
+// functions such as `absl::LoadTimeZone()`. Note: strings like "PST"
+// and "EDT" are not valid TZ identifiers. Prefer to pass by value rather than
+// const reference.
 //
 // For more on the fundamental concepts of time zones, absolute times, and civil
 // times, see https://github.com/google/cctz#fundamental-concepts
